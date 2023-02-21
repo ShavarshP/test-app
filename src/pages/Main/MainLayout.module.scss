@@ -26,7 +26,19 @@
     .backgroundPicture {
         min-height: 1199px;
         background: url('../../assets/images/background.png') no-repeat top;
+        position: relative;
 
+        &:before {
+            content: '';
+            left: -20%;
+            position: absolute;
+            z-index: 0;
+            width: 140%;
+            height: 150px;
+            top: -45px;
+            background: #060606;
+            filter: blur(22px);
+        }
         @include media-max('md') {
             background: unset;
         }
@@ -189,7 +201,7 @@
 
                     &:before {
                         content: '';
-                        left: 0px;
+                        left: -20%;
                         position: absolute;
                         z-index: -1;
                         width: 140%;
