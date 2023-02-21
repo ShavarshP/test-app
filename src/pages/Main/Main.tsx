@@ -22,7 +22,7 @@ function Main() {
   return (
     <div className={styles.container}>
       <Header />
-      <div className={styles.backgroundPicture}>
+      <main className={styles.backgroundPicture}>
         <div className={styles.mainContent}>
           <div className={styles.textContent}>
             <h1 className={styles.mainTitle}>Форум Microsoft</h1>
@@ -54,9 +54,9 @@ function Main() {
               </div>
             )}
           </div>
-          <Footer />
         </div>
-      </div>
+      </main>
+      <Footer />
     </div>
   )
 }
