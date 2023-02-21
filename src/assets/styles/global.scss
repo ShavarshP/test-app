@@ -1,0 +1,16 @@
+@import "./helpers";
+
+body {
+  font-family: $plexMono;
+  background-color: color('main');
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  min-height: 100vh;
+  width: 100%;
+}
+

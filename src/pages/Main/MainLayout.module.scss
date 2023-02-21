@@ -1,0 +1,238 @@
+@import 'assets/styles/helpers';
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 120px 0 40px 0;
+  margin: 0 auto;
+  position: relative;
+
+  &:after {
+    bottom: 10px;
+    content: '';
+    position: absolute;
+    width: 200%;
+    left: -50%;
+    height: 16%;
+    background: radial-gradient(
+      35.25% 81.65% at 80.64% -9.36%,
+      #060606 33.06%,
+      rgba(99, 19, 200, 0.5) 76.26%
+    );
+    opacity: 0.4;
+    filter: blur(280px);
+  }
+
+  @include media-max('sm') {
+    padding-top: 80px;
+  }
+
+  .backgroundPicture {
+    min-height: 1199px;
+    background: url('../../assets/images/background.png') no-repeat top;
+
+    @include media-max('md') {
+      background: unset;
+    }
+
+    .mainContent {
+      max-width: 1050px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      @media only screen and (max-width: 1100px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @include media-max('sm') {
+        padding: 20px;
+        align-items: center;
+      }
+
+      .textContent {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 90%;
+          top: 0;
+          left: -300px;
+          height: 849px;
+          z-index: -1;
+          background: linear-gradient(
+            173.57deg,
+            #00092e 53.34%,
+            #03001f 69.51%,
+            #110520 81.76%
+          );
+          filter: blur(122px);
+        }
+
+        .mainTitle {
+          font-family: 'IBM Plex Mono', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 53px;
+          line-height: 69px;
+          color: color('light-pink');
+          margin-bottom: 20px;
+          @include media-max('sm') {
+            font-size: 30px;
+            line-height: 39px;
+          }
+        }
+
+        .subTitle {
+          max-width: 740px;
+          width: 100%;
+          font-family: 'IBM Plex Mono', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 53px;
+          line-height: 69px;
+          color: color('light-pink');
+          @include media-max('sm') {
+            font-size: 30px;
+            line-height: 39px;
+          }
+        }
+
+        .mainText {
+          max-width: 955px;
+          width: 100%;
+          font-family: 'JetBrains Mono', sans-serif;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 26px;
+          margin-top: 80px;
+          margin-bottom: 24px;
+          color: color('light-pink');
+          @include media-max('sm') {
+            font-size: 20px;
+            margin-top: 40px;
+          }
+        }
+
+        .subtext {
+          font-family: 'JetBrains Mono', sans-serif;
+          font-style: normal;
+          font-weight: 200;
+          font-size: 16px;
+          line-height: 21px;
+          color: color('light-pink');
+          margin-top: 24px;
+          margin-bottom: 152px;
+          @include media-max('sm') {
+            margin-top: 20px;
+            margin-bottom: 70px;
+          }
+        }
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 30px;
+        max-width: 166px;
+        width: 100%;
+        border: 3px solid color('white');
+        font-family: 'JetBrains Mono', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: color('white');
+        background-color: unset;
+      }
+
+      .membersWrapper {
+        margin-top: 301px;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          right: -20%;
+          top: -6%;
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 47%;
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(119, 1, 77, 0.5) 3.59%,
+            rgba(92, 14, 191, 0.5) 100%
+          );
+          opacity: 0.5;
+          z-index: -1;
+          filter: blur(210px);
+          border-radius: 4000px;
+          transform: rotate(-120deg);
+        }
+
+        @include media-max('sm') {
+          margin-top: 150px;
+        }
+
+        .speakerTitle {
+          font-family: 'JetBrains Mono', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 37px;
+          color: color('light-pink');
+          line-height: 49px;
+          margin-bottom: 70px;
+          z-index: 1;
+          position: relative;
+
+          &:before {
+            content: '';
+            left: 0px;
+            position: absolute;
+            z-index: -1;
+            width: 140%;
+            height: 197px;
+            top: -163px;
+            background: #060606;
+            filter: blur(42px);
+          }
+
+          @include media-max('md') {
+            text-align: center;
+          }
+          @include media-max('sm') {
+            font-size: 20px;
+            width: 100%;
+            margin-bottom: 50px;
+          }
+        }
+
+        .cardsWrapper {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          @media only screen and (max-width: 1100px) {
+            justify-content: space-around;
+            align-items: flex-start;
+          }
+          @include media-max('md') {
+            justify-content: space-around;
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+  }
+}
