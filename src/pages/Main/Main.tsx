@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { SpeakersCard } from 'components/SpeakersCard'
 import { getSpeakersData } from 'redux/actions/speakersActions'
 import { RootState } from 'redux/reducers/rootReducer'
-import Header from 'components/Header'
+import Header from '../../components/Header'
 import styles from './MainLayout.module.scss'
-import Footer from 'components/Footer'
+import Footer from '../../components/Footer'
 
 function Main() {
   const dispatch = useDispatch()
@@ -15,6 +15,8 @@ function Main() {
     (state: RootState) => state.speakers,
   )
 
+  console.log(speakersData)
+
   useQuery('invoices', () => {
     dispatch(getSpeakersData())
   })
@@ -22,7 +24,7 @@ function Main() {
   return (
     <div className={styles.container}>
       <Header />
-      <main className={styles.backgroundPicture}>
+      <div className={styles.backgroundPicture}>
         <div className={styles.mainContent}>
           <div className={styles.textContent}>
             <h1 className={styles.mainTitle}>Форум Microsoft</h1>
@@ -54,9 +56,9 @@ function Main() {
               </div>
             )}
           </div>
+          <Footer />
         </div>
-      </main>
-      <Footer />
+      </div>
     </div>
   )
 }
