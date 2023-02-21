@@ -1,3 +1,3 @@
-import SpeakersCard from './SpeakersCard'
+import SpeakersCard from './SpeakersCard';
 
-export {SpeakersCard}
+export { SpeakersCard };

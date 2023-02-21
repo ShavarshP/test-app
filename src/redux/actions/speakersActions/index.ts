@@ -1,1 +1,1 @@
-export * from './SpeakersActions'
+export * from './SpeakersActions';

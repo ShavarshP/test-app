@@ -1,2 +1,2 @@
-import speakersSaga from './speakersSaga'
-export default speakersSaga
+import speakersSaga from './speakersSaga';
+export default speakersSaga;

@@ -1,1 +1,1 @@
-export * from './SpeakersTypes'
+export * from './SpeakersTypes';

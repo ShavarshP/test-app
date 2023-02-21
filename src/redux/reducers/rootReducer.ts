@@ -1,10 +1,10 @@
-import { combineReducers } from 'redux'
-import speakersReducer from './speakersReducer'
+import { combineReducers } from 'redux';
+import speakersReducer from './speakersReducer';
 
 const rootReducer = combineReducers({
-  speakers: speakersReducer,
-})
+    speakers: speakersReducer,
+});
 
-export type RootState = ReturnType<typeof rootReducer>
+export type RootState = ReturnType<typeof rootReducer>;
 
-export default rootReducer
+export default rootReducer;

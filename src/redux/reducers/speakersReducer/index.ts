@@ -1,2 +1,2 @@
-import speakers from './speakersReducer'
-export default speakers
+import speakers from './speakersReducer';
+export default speakers;

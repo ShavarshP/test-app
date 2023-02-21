@@ -1,13 +1,13 @@
 import React from 'react';
-import {ReactComponent as Logo} from 'assets/svg/logo.svg';
-import {Link} from 'react-router-dom';
+import { ReactComponent as Logo } from 'assets/svg/logo.svg';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 
 const Header = () => {
     return (
-        <div className={styles.container}>
+        <header className={styles.container}>
             <div className={styles.logoWrapper}>
-                <Logo/>
+                <Logo />
                 <div className={styles.textContainer}>
                     <span className={styles.logoMainText}>Security</span>
                     <span className={styles.logoSubText}>Forum</span>
@@ -15,15 +15,19 @@ const Header = () => {
             </div>
             <nav className={styles.navigationContainer}>
                 <ul>
-                    <li><Link to='#' className={styles.active}>о мероприятии</Link></li>
-                    <li><Link to='#'>спикеры</Link></li>
+                    <li>
+                        <Link to="#" className={styles.active}>
+                            о мероприятии
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="#">спикеры</Link>
+                    </li>
                 </ul>
             </nav>
-            <button className={styles.btn}>
-                регистрация
-            </button>
-        </div>
+            <button className={styles.btn}>регистрация</button>
+        </header>
     );
-}
+};
 
 export default Header;
